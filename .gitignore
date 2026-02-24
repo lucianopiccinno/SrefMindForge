@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+node_modules/
+.env
+_BACKUP/
+.netlify/
+.DS_Store
+Thumbs.db
+*.swp
+
+# Database SREF privato — non va su GitHub
+sref_full.json

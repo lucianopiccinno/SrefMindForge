@@ -1,0 +1,12 @@
+[build]
+  command = "python build_index_public.py"
+  functions = "netlify/functions"
+  publish = "netlify"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+[context.production.environment]
+  PYTHON_VERSION = "3.11"
