@@ -1264,11 +1264,10 @@ details p { margin-top: 6px; font-size: .8rem; line-height: 1.55; }
 <!-- HEADER -->
 <div class="header">
   <h1>CIANO<span>AI</span> SrefMindForge</h1>
-  <p>Find the perfect Midjourney SREF &amp; write your prompt &mdash; 5000+ styles in the database</p>
+  <p>Find the perfect Midjourney SREF &amp; write your prompt &mdash; 3000+ styles in the database</p>
   <div class="header-badges">
     <span class="badge-tier" id="tierBadge" onclick="openModal()">FREE &mdash; unlock PRO</span>
     <span class="roll-display" id="rollDisplay"></span>
-    <button class="btn-reset-roll" onclick="resetRolls()" title="Reset daily search counter">RESET</button>
   </div>
 </div>
 
@@ -1919,8 +1918,8 @@ var _VISUAL_STYLE = {
   "illustration":  ["clean vector linework, flat color zones, bold graphic silhouette, storybook palette",
                     "editorial-quality inking, deliberate color story, spot-color accents, composed layout",
                     "narrative character pose, clear visual hierarchy, textured fill, punchy limited palette"],
-  "abstract":      ["gestural color fields, dynamic fracture planes, impasto texture bursts, raw expressive mark",
-                    "layered semi-transparent glazes, dripped pigment trails, scraped impasto texture",
+  "abstract":      ["gestural color fields, dynamic fracture planes, textured paint bursts, raw expressive mark",
+                    "layered semi-transparent glazes, dripped pigment trails, scraped thick-paint texture",
                     "deconstructed form fragments, energetic brushwork, accidental beauty, pure color tension"],
   "minimalist":    ["single clean line weight, purposeful negative space, minimal two-tone palette, refined form",
                     "sparse composition, micro-detail accent, clean white field, deliberate restraint",
@@ -1940,8 +1939,8 @@ var _VISUAL_STYLE = {
   "urban":         ["concrete brutalist texture, street-level grit, neon reflection on wet asphalt, film grain",
                     "tagged surface decay, wire-shadow graphic, gritty city ambient, pollution haze",
                     "architectural compression, ambient crowd blur, raw ISO noise, overcast flat light"],
-  "painting":      ["impasto loaded brushwork, alla prima wet-into-wet, museum canvas texture, glazed depth",
-                    "old-master chiaroscuro, rich bitumen glaze, bristle stroke visibility, pigment body",
+  "painting":      ["heavy textured brushwork, wet-on-wet technique, museum canvas texture, glazed depth",
+                    "old-master tonal contrast, rich bitumen glaze, bristle stroke visibility, pigment body",
                     "gestural expressive marks, plein-air light capture, broken color technique, underpainting bleed"],
   "surreal":       ["impossible scale juxtaposition, dream-logic continuity break, hyper-detailed dreamscape, Magritte light",
                     "melting time references, anatomically impossible junction, gravity-defying levitation, lacquered finish",
@@ -1952,7 +1951,7 @@ var _VISUAL_STYLE = {
   "vibrant_pop":   ["maximum chroma flat fill, Roy Lichtenstein bold outline, halftone dot grid, screaming contrast",
                     "CMYK primary punch, billboard graphic scale, high-key saturation, graphic pop boldness",
                     "poster-flat simplicity, neon sign energy, graphic symbol clarity, color-field impact"],
-  "noir":          ["high-contrast chiaroscuro, rain-gloss reflection, venetian blind shadow stripe, single-source drama",
+  "noir":          ["high-contrast light-shadow, rain-gloss reflection, venetian blind shadow stripe, single-source drama",
                     "deep shadow pool, silver-gelatin tonal range, smoke diffusion veil, hard-boiled graphic edge",
                     "expressionist shadow distortion, key-light cigarette haze, noir composition tension"],
   "steampunk":     ["ornate brass gear-work, Victorian riveted plating, mahogany copper inlay, sepia steam haze",
@@ -2004,7 +2003,7 @@ var _ART_STYLE_DECL = {
                     "space opera illustration style with dramatic cosmic scale, zero-g elegance, and crystalline detail"],
   "gothic":        ["gothic novel cover style with intricate dark engraving, sorcerous character, and eldritch atmosphere",
                     "Victorian etching style with cross-hatched shadow zones, ornate border, and ink-bitten surface",
-                    "dark romanticism style with brooding chiaroscuro, symbolic depth, and gothic grandeur"],
+                    "dark romanticism style with brooding tonal contrast, symbolic depth, and gothic grandeur"],
   "horror":        ["underground horror comic style with exaggerated grotesque anatomy, visceral inking, and raw terror",
                     "rotoscope horror style with sharp silhouette edges, deep shadow zones, and stark contrast",
                     "pulp horror illustration style with maximalist shadow, nerve-shredding atmosphere, and ominous glow"],
@@ -2024,7 +2023,7 @@ var _ART_STYLE_DECL = {
                     "concept art illustration style with production-ready quality, environment storytelling, and visual development depth"],
   "abstract":      ["abstract expressionism style with raw gestural energy, pure pigment emotion, and spontaneous mark",
                     "lyrical abstraction style with refined color field, delicate surface tension, and meditative presence",
-                    "neo-expressionist painting style with loaded impasto, fractured plane, and psychological intensity"],
+                    "neo-expressionist painting style with heavy impasto technique, fractured plane, and psychological intensity"],
   "minimalist":    ["minimalist graphic design style with radical reduction, elegant proportion, and Bauhaus discipline",
                     "Swiss international style with grid logic, sans-serif clarity, and purposeful restraint",
                     "reductive illustration style with single stroke economy, pure silhouette, and conceptual precision"],
@@ -2045,7 +2044,7 @@ var _ART_STYLE_DECL = {
                     "urban reportage style with film grain texture, compressed telephoto, and social documentary weight"],
   "painting":      ["classical oil painting style with old-master glazing technique, rich bitumen depth, and museum-wall presence",
                     "plein-air impressionist painting style with broken color, gestural light capture, and outdoor immediacy",
-                    "contemporary figurative painting style with loaded impasto, raw canvas showing, and expressive urgency"],
+                    "contemporary figurative painting style with heavy impasto technique, raw canvas showing, and expressive urgency"],
   "surreal":       ["metaphysical surrealist painting style with Magritte light, impossible calm, and symbol-laden space",
                     "Salvador Dalí dream-logic style with hyper-detailed dreamscape, melting form, and subconscious narrative",
                     "magic realist illustration style with everyday miracle, quiet revelation, and tender impossible detail"],
@@ -2056,7 +2055,7 @@ var _ART_STYLE_DECL = {
                     "graphic novel pop style with maximum chroma impact, billboard scale graphic, and saturated drama",
                     "street art pop style with spray-can energy, stencil precision, and public-space visual punch"],
   "noir":          ["film noir illustration style with venetian-blind shadow stripe, single-source drama, and silver-gelatin tonal range",
-                    "hardboiled detective graphic style with deep shadow pool, rain-gloss reflection, and chiaroscuro tension",
+                    "hardboiled detective graphic style with deep shadow pool, rain-gloss reflection, and stark contrast tension",
                     "neo-noir digital painting style with expressionist shadow distortion, smoke veil diffusion, and moral ambiguity"],
   "steampunk":     ["steampunk concept art style with Victorian engineering obsession, polished brass beauty, and gaslight amber mood",
                     "steampunk illustration style with hand-inked gear detail, aged leather texture, and clockwork precision",
@@ -2123,7 +2122,7 @@ var _PROPS_MAP = {
 
 /* Qualificatori atmosferici per mood — 7-8 parole evocative, stile Luciano */
 var _ATMOSPHERE_MAP = {
-  "dark":        ["shadowed recesses, deep chiaroscuro contrast, spectral cold glow, ominous depth, haunting stillness, void-black undertones, oppressive weight",
+  "dark":        ["shadowed recesses, deep tonal contrast, spectral cold glow, ominous depth, haunting stillness, void-black undertones, oppressive weight",
                   "ink-black shadow pools, flickering edge light, cryptic symbol scatter, cold iron texture, ghost-light bleed, abyssal peripheral darkness",
                   "heavy noir silhouette, scorched-earth undertone, sulfur-tinted haze, bone-cold light source, visceral shadow depth, silent dread"],
   "ethereal":    ["soft luminescent halo, dreamlike chiffon haze, astral shimmer veil, celestial radiance bloom, otherworldly glow pulse, translucent veil layers, airy diffusion",
@@ -2153,7 +2152,7 @@ var _ATMOSPHERE_MAP = {
   "chaotic":     ["fractured plane energy, explosive color collision, turbulent brush mark, kinetic force scatter, maximum visual entropy, velocity-blurred form",
                   "shattered reality fragment, overloaded signal noise, impact-wave distortion, storm-force diagonal, primal scream color, momentum-driven composition",
                   "riot-energy texture, cascading system failure, broken symmetry drama, white-noise static depth, emergency-light strobe, war-zone compositional debris"],
-  "dramatic":    ["theatrical shadow rake, single-source punch light, deep chiaroscuro tension, stage-presence weight, cinematic composition gravity, high-contrast silhouette drama",
+  "dramatic":    ["theatrical shadow rake, single-source punch light, deep shadow tension, stage-presence weight, cinematic composition gravity, high-contrast silhouette drama",
                   "venetian-blind shadow stripe, smoke-veil atmosphere, three-quarter back-rim light, noir-grade tonal split, cinematic depth-of-field, story-driven framing",
                   "spotlight isolation drama, oppressive shadow fill, face-carved directional light, cinematic color grade, scene-weight pause, tense negative space"],
   "elegant":     ["refined restraint composition, soft luxury texture, luminous satin surface, gold-thread detail accent, composed white-space balance, graceful proportion geometry",
@@ -2196,7 +2195,7 @@ var _LIGHTING_MAP = {
   "futuristic":  ["cold clinical LED grid array","neon bloom urban ambient","holographic blue fill light","terminal-green monitor ambient cast"],
   "romantic":    ["warm candleflame golden fill","rosy-tinted sunset golden hour","fairy-light bokeh wrap-around","fireplace amber key with shadow"],
   "chaotic":     ["stroboscopic flash fragment lighting","lightning-strike instant illumination","fire-source dynamic dancing light","emergency siren red-blue flash"],
-  "dramatic":    ["stark single-source key with deep shadow fill","theatrical ellipsoidal spotlight isolation","three-quarter rim light with heavy shadow","cinematic cross-light chiaroscuro"],
+  "dramatic":    ["stark single-source key with deep shadow fill","theatrical ellipsoidal spotlight isolation","three-quarter rim light with heavy shadow","cinematic cross-light contrast"],
   "elegant":     ["soft beauty dish with feathered fill","warm pearled clamshell portrait light","diffused north-light studio ambient","low-angle warm window light"],
   "any":         ["professional studio three-point lighting","cinematic motivated light setup","dramatic directional key light with ambient fill","natural available light direction"]
 };
@@ -2345,6 +2344,29 @@ function _pass4_bestpractice(text) {
   return t;
 }
 
+/* ===== PASSO 5: Elabora testo utente — articoli e normalizzazione =====
+   Aggiunge articolo iniziale, normalizza maiuscole spurie nel mezzo del testo.
+   "Dragon with curious expression, Eye and flame"
+   → "a dragon with curious expression, eye and flame" */
+function _pass5_elaborate(text) {
+  var t = text.trim();
+  if (!t) return t;
+
+  /* Normalizza maiuscole spurie dopo virgola/punto e virgola */
+  t = t.replace(/([,;]\s+)([A-Z])([a-z])/g, function(m, p1, p2, p3) {
+    return p1 + p2.toLowerCase() + p3;
+  });
+
+  /* Aggiunge articolo "a"/"an" all'inizio se manca */
+  var hasArticle = /^(a|an|the|my|your|his|her|its|our|their|this|that|one|two|three|four|five)\s/i.test(t);
+  if (!hasArticle) {
+    var article = /^[aeiou]/i.test(t) ? "an " : "a ";
+    t = article + t.charAt(0).toLowerCase() + t.slice(1);
+  }
+
+  return t;
+}
+
 /* ===== FASE 1: rileva contesto semantico dal testo tradotto =====
    Usato quando i dropdown sono "any" per evitare componenti incoerenti. */
 function _detectContext(text) {
@@ -2437,6 +2459,8 @@ function processPrompt(raw) {
   translated = _pass3_coherence(translated);
   /* Passo 4: upgrade aggettivi deboli */
   translated = _pass4_bestpractice(translated);
+  /* Passo 5: articolo iniziale + normalizzazione maiuscole spurie */
+  translated = _pass5_elaborate(translated);
 
   /* FASE 2 — Coerenza: rileva context dal testo, integra con i dropdown */
   var ctx = _detectContext(translated);
