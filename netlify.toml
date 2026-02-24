@@ -1,5 +1,5 @@
 [build]
-  command = "pip install -r requirements.txt && python build_index_public.py"
+  command = "echo 'Pre-built locally'"
   functions = "netlify/functions"
   publish = "netlify"
 
